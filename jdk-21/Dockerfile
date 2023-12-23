@@ -1,5 +1,5 @@
 # Use a Maven base image for ARM64
-FROM aarch64/maven:3.9.5-openjdk-17-slim
+FROM arm64v8/maven:3-eclipse-temurin-21-jammy
 
 # Google Chrome
 ARG CHROME_VERSION=120.0.6099.129-1
