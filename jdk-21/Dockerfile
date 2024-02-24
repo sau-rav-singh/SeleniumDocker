@@ -1,4 +1,3 @@
-# Use a Maven base image for ARM64
 FROM maven:3.9.5-eclipse-temurin-21
 
 # Google Chrome
@@ -15,8 +14,7 @@ RUN apt-get update -qqy \
 
 # ChromeDriver
 ARG CHROME_DRIVER_VERSION=122.0.6261.69
-RUN wget -q -O /tmp/chromedriver.zip https://storage.googleapis.com/chrome-for-testing-public/${CHROME_DRIVER_VERSION}/linux64/chromedriver-linux64.zip \
-    && unzip /tmp/chromedriver.zip -d /opt \
-    && rm /tmp/chromedriver.zip \
-    && chmod +x /opt/chromedriver \
-    && ln -s /opt/chromedriver /usr/bin/chromedriver
+RUN wget -q -O /tmp/chromedriver.zip https://storage.googleapis.com/chrome-for-testing-public/${CHROME_DRIVER_VERSION}/linux64/chromedriver-linux64.zip
+RUN unzip /tmp/chromedriver.zip -d /opt 
+RUN rm /tmp/chromedriver.zip
+RUN ln -s /opt/chromedriver-linux64/chromedriver /usr/bin/chromedriver
