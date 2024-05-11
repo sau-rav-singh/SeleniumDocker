@@ -7,7 +7,7 @@ Includes:
 * JDK 21
 * Maven 3.9.5
 * Chrome 124.0.6367.201
-* ChromeDriver 123.0.6312.122
+* ChromeDriver 124.0.6367.201
 
 Available on [Docker Hub](https://hub.docker.com/r/singhsaurav/seleniumdocker).
 
